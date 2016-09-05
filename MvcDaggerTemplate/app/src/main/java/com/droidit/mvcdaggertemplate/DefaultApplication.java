@@ -8,7 +8,7 @@ import com.droidit.mvcdaggertemplate.dependencyInjection.DaggerApplicationCompon
 
 /**
  * Created by JohannesC on 30-May-16.
- * Application class. Can create own one a use logic in this class.
+ * Application class. Can create own one and use logic in this class.
  */
 public class DefaultApplication extends Application {
 

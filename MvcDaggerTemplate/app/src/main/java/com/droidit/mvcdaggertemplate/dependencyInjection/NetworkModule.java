@@ -10,6 +10,4 @@ public class NetworkModule {
 
 //    http://jsonplaceholder.typicode.com/
 
-
-
 }

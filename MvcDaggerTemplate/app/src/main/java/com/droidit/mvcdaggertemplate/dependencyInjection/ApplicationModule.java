@@ -1,7 +1,8 @@
 package com.droidit.mvcdaggertemplate.dependencyInjection;
 
-import android.app.Application;
 import android.content.Context;
+
+import com.droidit.mvcdaggertemplate.DefaultApplication;
 
 import javax.inject.Singleton;
 
@@ -15,9 +16,9 @@ import dagger.Provides;
 @Module
 public class ApplicationModule {
 
-    private final Application mApplication;
+    private final DefaultApplication mApplication;
 
-    public ApplicationModule(Application application) {
+    public ApplicationModule(DefaultApplication application) {
         this.mApplication = application;
     }
 
