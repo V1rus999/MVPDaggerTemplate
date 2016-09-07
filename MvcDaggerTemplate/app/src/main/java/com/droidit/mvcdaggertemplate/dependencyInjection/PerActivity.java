@@ -1,7 +1,7 @@
 package com.droidit.mvcdaggertemplate.dependencyInjection;
 
 /**
- * Created by V1rus on 05-Sep-16.
+ * Created by JohannesC on 05-Sep-16.
  */
 
 import java.lang.annotation.Retention;

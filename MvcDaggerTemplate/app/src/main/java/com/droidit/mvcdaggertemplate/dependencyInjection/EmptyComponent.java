@@ -1,16 +1,16 @@
 package com.droidit.mvcdaggertemplate.dependencyInjection;
 
-import com.droidit.mvcdaggertemplate.main.MainActivity;
+import com.droidit.mvcdaggertemplate.main.EmptyActivity;
 
 import dagger.Component;
 
 /**
- * Created by V1rus on 05-Sep-16.
+ * Created by JohannesC on 05-Sep-16.
  */
 @PerActivity
 @Component(dependencies = ApplicationComponent.class, modules = {NetworkModule.class})
-public interface MainComponent {
+public interface EmptyComponent {
 
-    void inject(MainActivity mainActivity);
+    void inject(EmptyActivity emptyActivity);
 
 }

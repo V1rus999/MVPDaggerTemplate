@@ -4,9 +4,9 @@ package com.droidit.domain.main;
 import com.droidit.domain.BaseContract;
 
 /**
- * Created by V1rus on 05-Sep-16.
+ * Created by JohannesC on 05-Sep-16.
  */
-public interface MainContract {
+public interface EmptyContract {
 
     interface Presenter extends BaseContract.Presenter<View> {
 
