@@ -1,12 +1,11 @@
-package com.droidit.domain.main;
-
+package com.droidit.domain.emptyExample;
 
 import com.droidit.domain.BaseContract;
 
 /**
- * Created by V1rus on 05-Sep-16.
+ * Created by JohannesC on 07-Sep-16.
  */
-public interface MainContract {
+public interface EmptyExampleContract {
 
     interface Presenter extends BaseContract.Presenter<View> {
 

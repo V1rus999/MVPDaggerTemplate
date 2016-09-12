@@ -12,18 +12,18 @@ import com.droidit.mvcdaggertemplate.dependencyInjection.DaggerApplicationCompon
  */
 public class DefaultApplication extends Application {
 
-    private ApplicationComponent mApplicationComponent;
+    private ApplicationComponent applicationComponent;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        mApplicationComponent = DaggerApplicationComponent.builder()
+        applicationComponent = DaggerApplicationComponent.builder()
                 .applicationModule(new ApplicationModule(this))
                 .build();
 
     }
 
     public ApplicationComponent getMainComponent() {
-        return mApplicationComponent;
+        return applicationComponent;
     }
 }
