@@ -1,2 +1,2 @@
-# MvcDaggerTemplate
-Basic MVC template with a dagger implementation to get work started faster.
+# MvpDaggerTemplate
+Basic MVP template with a dagger implementation to get work started faster.
