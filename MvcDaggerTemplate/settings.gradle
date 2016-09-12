@@ -1,1 +1,1 @@
-include ':app', ':domain', ':retrofit'
+include ':app', ':domain', ':networking'

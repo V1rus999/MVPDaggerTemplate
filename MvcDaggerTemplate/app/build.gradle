@@ -34,4 +34,5 @@ dependencies {
     //testing
     testCompile 'junit:junit:4.12'
     compile project(path: ':domain')
+    compile project(path: ':networking')
 }

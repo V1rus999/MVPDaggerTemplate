@@ -11,10 +11,15 @@ public interface BasicExampleContract {
 
     interface Presenter extends BaseContract.Presenter<View> {
         void onConnectionButtonClicked();
+
+        void onGetPostsBtnClick();
     }
 
     interface View extends BaseContract.View {
 
+        void displaySinglePostTitle(String title);
+
+        void displayConnectionError(String message);
     }
 
     interface WireFrame {
