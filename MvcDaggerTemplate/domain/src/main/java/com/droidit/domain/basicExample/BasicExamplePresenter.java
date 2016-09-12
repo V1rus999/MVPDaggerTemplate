@@ -8,21 +8,21 @@ import javax.inject.Inject;
  */
 public class BasicExamplePresenter implements BasicExampleContract.Presenter {
 
-    private final BasicExampleContract.WireFrame mBasicExampleWireframe;
-    private BasicExampleContract.View mView;
+    private final BasicExampleContract.WireFrame wireframe;
+    private BasicExampleContract.View view;
 
     @Inject
     public BasicExamplePresenter(BasicExampleContract.WireFrame basicExampleWireframe) {
-        mBasicExampleWireframe = basicExampleWireframe;
+        wireframe = basicExampleWireframe;
     }
 
     @Override
     public void onCreate(BasicExampleContract.View view) {
-        mView = view;
+        this.view = view;
     }
 
     @Override
     public void onConnectionButtonClicked() {
-        mBasicExampleWireframe.onConnectionButtonClicked();
+        wireframe.onConnectionButtonClicked();
     }
 }

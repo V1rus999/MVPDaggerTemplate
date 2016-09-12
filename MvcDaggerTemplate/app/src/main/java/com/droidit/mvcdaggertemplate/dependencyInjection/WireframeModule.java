@@ -14,15 +14,15 @@ import dagger.Provides;
 @Module
 public class WireframeModule {
 
-    private final Activity mActivity;
+    private final Activity activity;
 
     public WireframeModule(Activity activity) {
-        mActivity = activity;
+        this.activity = activity;
     }
 
     @Provides
     public Activity provideActivity() {
-        return mActivity;
+        return activity;
     }
 
     @Provides

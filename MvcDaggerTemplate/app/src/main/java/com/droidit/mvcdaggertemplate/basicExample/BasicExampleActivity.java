@@ -22,10 +22,10 @@ import butterknife.OnClick;
  */
 public class BasicExampleActivity extends AppCompatActivity implements BasicExampleContract.View {
 
-    private BasicExampleComponent mBasicExampleComponent;
+    private BasicExampleComponent basicExampleComponent;
 
     @Inject
-    BasicExampleContract.Presenter mBasicExamplePresenter;
+    BasicExampleContract.Presenter basicExamplePresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,7 @@ public class BasicExampleActivity extends AppCompatActivity implements BasicExam
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         this.initializeInjector();
-        mBasicExamplePresenter.onCreate(this);
+        basicExamplePresenter.onCreate(this);
     }
 
     protected ApplicationComponent getApplicationComponent() {
@@ -41,15 +41,15 @@ public class BasicExampleActivity extends AppCompatActivity implements BasicExam
     }
 
     private void initializeInjector() {
-        this.mBasicExampleComponent = DaggerBasicExampleComponent.builder()
+        this.basicExampleComponent = DaggerBasicExampleComponent.builder()
                 .applicationComponent(getApplicationComponent())
                 .wireframeModule(new WireframeModule(this))
                 .build();
-        mBasicExampleComponent.inject(this);
+        basicExampleComponent.inject(this);
     }
 
     @OnClick(R.id.activity_main_launch_connection_btn)
     public void onLaunchConnectionBtnClick() {
-        mBasicExamplePresenter.onConnectionButtonClicked();
+        basicExamplePresenter.onConnectionButtonClicked();
     }
 }

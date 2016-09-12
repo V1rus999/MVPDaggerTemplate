@@ -1,7 +1,6 @@
 package com.droidit.mvcdaggertemplate.basicExample;
 
 import android.app.Activity;
-import android.content.Context;
 
 import com.droidit.domain.basicExample.BasicExampleContract;
 import com.droidit.mvcdaggertemplate.emptyExample.EmptyExampleActivity;
@@ -14,15 +13,15 @@ import javax.inject.Inject;
  */
 public class BasicExampleWireframe implements BasicExampleContract.WireFrame {
 
-    private final Activity mContext;
+    private final Activity context;
 
     @Inject
     public BasicExampleWireframe(Activity context) {
-        mContext = context;
+        this.context = context;
     }
 
     @Override
     public void onConnectionButtonClicked() {
-        mContext.startActivity(EmptyExampleActivity.getActivityIntent(mContext));
+        context.startActivity(EmptyExampleActivity.getActivityIntent(context));
     }
 }

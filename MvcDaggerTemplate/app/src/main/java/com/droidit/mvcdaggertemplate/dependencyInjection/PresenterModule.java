@@ -1,7 +1,5 @@
 package com.droidit.mvcdaggertemplate.dependencyInjection;
 
-import android.app.Activity;
-
 import com.droidit.domain.basicExample.BasicExampleContract;
 import com.droidit.domain.basicExample.BasicExamplePresenter;
 
