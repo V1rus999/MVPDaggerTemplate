@@ -22,17 +22,17 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(path: ':domain')
+    compile project(path: ':networking')
+
     compile 'com.android.support:appcompat-v7:23.+'
 
     //DI
     apt 'com.google.dagger:dagger-compiler:2.6.1'
     compile 'com.google.dagger:dagger:2.6.1'
-    provided 'org.glassfish:javax.annotation:10.0-b28'
     compile 'com.jakewharton:butterknife:8.4.0'
     apt 'com.jakewharton:butterknife-compiler:8.4.0'
 
     //testing
     testCompile 'junit:junit:4.12'
-    compile project(path: ':domain')
-    compile project(path: ':networking')
 }
