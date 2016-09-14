@@ -21,10 +21,15 @@ public class NetworkModule {
     }
 
     @Provides
-    public Retrofit provideApiClient() {
+    public GsonConverterFactory provideGson() {
+        return GsonConverterFactory.create();
+    }
+
+    @Provides
+    public Retrofit provideApiClient(GsonConverterFactory gsonConverterFactory) {
         return new Retrofit.Builder()
                 .baseUrl(baseUrl)
-                .addConverterFactory(GsonConverterFactory.create())
+                .addConverterFactory(gsonConverterFactory)
                 .build();
     }
 
