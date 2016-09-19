@@ -12,7 +12,7 @@ public interface BasicExampleContract {
     interface Presenter extends BaseContract.Presenter<View> {
         void onConnectionButtonClicked();
 
-        void onGetPostsBtnClick();
+        void onGetPostsBtnClicked();
     }
 
     interface View extends BaseContract.View {

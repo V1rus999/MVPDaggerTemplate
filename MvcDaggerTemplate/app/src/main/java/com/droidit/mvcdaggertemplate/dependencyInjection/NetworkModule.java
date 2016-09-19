@@ -1,6 +1,7 @@
 package com.droidit.mvcdaggertemplate.dependencyInjection;
 
 import com.droidit.domain.posts.PostService;
+import com.droidit.domain.threading.BackgroundExecutor;
 import com.droidit.retrofit.RetrofitPostService;
 
 import dagger.Module;
@@ -26,9 +27,10 @@ public class NetworkModule {
     }
 
     @Provides
-    public Retrofit provideApiClient(GsonConverterFactory gsonConverterFactory) {
+    public Retrofit provideApiClient(GsonConverterFactory gsonConverterFactory, BackgroundExecutor backgroundExecutor) {
         return new Retrofit.Builder()
                 .baseUrl(baseUrl)
+                .callbackExecutor(backgroundExecutor)
                 .addConverterFactory(gsonConverterFactory)
                 .build();
     }
