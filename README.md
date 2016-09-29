@@ -14,5 +14,5 @@ You will want to make a few minor changes when using this template:
     * Rename the base package com.droidit.mvcdaggertemplate (https://stackoverflow.com/questions/16804093/android-studio-rename-package)
     * Modify the applicationId.
     * Modify package in manifest tag in AndroidManifest.xml
-
+    * Clear git commit history if necessary (http://stackoverflow.com/a/13102849/4448700)
 
