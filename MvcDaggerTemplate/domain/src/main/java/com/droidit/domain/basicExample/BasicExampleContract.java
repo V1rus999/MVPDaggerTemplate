@@ -1,6 +1,4 @@
 package com.droidit.domain.basicExample;
-
-
 import com.droidit.domain.BaseContract;
 
 /**
