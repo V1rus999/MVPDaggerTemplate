@@ -29,8 +29,6 @@ public class BasicExampleActivity extends AppCompatActivity implements BasicExam
     @BindView(R.id.activity_main_posts_tv)
     TextView activity_main_posts_tv;
 
-    private BasicExampleComponent basicExampleComponent;
-
     @Inject
     BasicExampleContract.Presenter basicExamplePresenter;
 
@@ -48,7 +46,7 @@ public class BasicExampleActivity extends AppCompatActivity implements BasicExam
     }
 
     private void initializeInjector() {
-        this.basicExampleComponent = DaggerBasicExampleComponent.builder()
+        BasicExampleComponent basicExampleComponent = DaggerBasicExampleComponent.builder()
                 .applicationComponent(getApplicationComponent())
                 .networkModule(new NetworkModule("http://jsonplaceholder.typicode.com/"))
                 .wireframeModule(new WireframeModule(this))
@@ -63,7 +61,7 @@ public class BasicExampleActivity extends AppCompatActivity implements BasicExam
 
     @OnClick(R.id.activity_main_get_posts_btn)
     public void onGetPostsBtnClick() {
-        basicExamplePresenter.onGetPostsBtnClick();
+        basicExamplePresenter.onGetPostsBtnClicked();
     }
 
     @Override

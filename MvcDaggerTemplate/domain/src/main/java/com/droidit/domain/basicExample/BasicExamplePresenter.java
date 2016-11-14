@@ -36,7 +36,7 @@ public class BasicExamplePresenter implements BasicExampleContract.Presenter {
     }
 
     @Override
-    public void onGetPostsBtnClick() {
+    public void onGetPostsBtnClicked() {
         postInteractor.getPosts(new DefaultCallback<List<PostDto>>() {
             @Override
             public void onSuccess(List<PostDto> success) {
